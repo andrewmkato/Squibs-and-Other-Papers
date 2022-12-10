@@ -1,0 +1,447 @@
+\documentclass{article}
+
+%All LaTeX documents have a ``preamble'' that includes the packages and macros needed to make the document compile. The file `PomonaLgcsFormatting.tex' includes the preamble for this template. You can see it in the file list on the left frame of your screen, and this document is instructed to use it with the \input{} command below.
+
+\input{PomonaLgcsFormatting}
+\usepackage[numbers]{natbib}
+\usepackage{tikz-dependency}
+\usepackage{float}
+
+\title{Anaphora Resolution in English Epicene Pronominalization:\\ Language Reform and Linguistic Theory}
+\author{Andrew M. Kato\\University of California, Santa Cruz}
+\date{\today}
+\begin{document}
+\maketitle\footnote{The format of this paper is from Pomona College's \LaTeX{} template by linguists Michael Diercks and Franny Brogan, which can be found at \href{https://www.overleaf.com/latex/templates/pomona-linguistics-latex-template/bvdxdtpwysnd}{https://www.overleaf.com/latex/templates/pomona-linguistics-latex-template/bvdxdtpwysnd}.}
+
+\begin{abstract}
+
+In recent years, increasing consensus among English speakers for an inclusive pronoun regardless of gender has materialized in mainstream usage of a singular neutral dimension of the word \textit{they}. Especially among situations in which the gender identity of an interlocutor is unknown, opting for \textit{they}, called an epicene pronoun, seems to have increased in both written and spoken English. How does this contemporary development interface with syntax, semantics, and contextual dialogue? The goal of this work is to serve, then, as a meaningful exploratory analysis of epicene pronominalization in English, focusing on disambiguation in discourse and arguing that it falls within a larger context of bottom-up language reform in the United States. The Corpus of Contemporary American English (COCA) will be referred to for real-world data of epicene pronoun usage. For accessibility to audiences beyond fields of modern theoretical linguistics, this paper will attempt to contextualize the topic at hand by introducing the study of language as a science, as a facet of philosophy, and as an extension of symbolic systems. For a holistic, historical understanding relevant to the epicene pronoun's development in English, this discussion will also briefly include the cultural debate and movements surrounding its prevalence up to today.
+
+\hspace{0cm}
+
+\hspace{-.45cm}\textbf{Keywords:} Epicene pronouns, pronominalization, language reform, anaphora resolution, descriptivism, inclusive language.
+
+% Abstract
+% Introduction: Understanding Linguistics
+%   - Syntactic Processing
+%   - Semantic Corrolaries
+% Nominalization and Pronominalization
+% Language Inclusivity in the United States
+% Epicenity in English
+%   - Representations in Syntax
+%   - Representations in Semantics
+% Ambiguity
+% Discussion
+%   - Limitations
+%   - Implications
+% Conclusion
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Syntactic Introduction: Surveying Relevant Foundations}
+
+Modern approaches to theoretical linguistics as we know it are incredibly recent, especially in comparison to other sciences and disciplines in human history. While, for instance, relevant mathematical theorems can stand for thousands of years, the status of modern linguistics as a scientific endeavor rooted in cognition and formal reasoning dates back to as recently as the mid-20th century \citep{StokhofvanLambalgen2011}. Perhaps most notably, the theory of generative grammar, i.e.\ that syntax presupposes finitely many cognitive rule-based principles, spurred intense exploration of linguistic patterns and phenomena \citep{Chomsky57}. This includes notions of what grammaticality might truly mean, as seen in a famous pair of constructions, which can be seen below. 
+
+\ea \label{XlistExample}
+    \begin{xlist}
+    \ex Colorless green ideas sleep furiously. \citep[p.~3]{Chomsky57}
+    \ex *Furiously sleep ideas green colorless. \citep[p.~3]{Chomsky57}\footnote{This paper will utilize the convention of placing an asterisk symbol (*) at the beginning of constructions ungrammatical to native speakers.}
+    \end{xlist}
+\z 
+
+\noindent While the semantic value of (1a) carries no real-life accuracy, its grammaticality remains. There is no reality where an idea that is simultaneously green and colorless possesses the capacity to sleep. The sentence is nonsensical. By contrast, the structure of (1b) is both semantically and syntactically illogical. This example, though simple, helps characterize thorough theoretical investigation into the cognitive principles that might explain such discrepancies in syntactic structure. With mathematical abstractions of syntax into formal phrase-structure rules \citep{Chomsky56,ChomskySchutzenberger63,PullumGazdar82}, sentences (1a-b) could be analyzed systematically as seen in (2)\footnote{Note the triangle notation, which is typically meant to abstract away details that are irrelevant to the discussion at hand.}, which is a constituency-based tree. (1a) could be considered a realization of symbolic rules in (4). 
+
+\ea \label{FirstTree}
+\Forest{
+%for tree={s sep=10mm, inner sep=0, l-=3mm}
+[S 
+    [NP 
+        [Colorless green ideas, roof]
+    ]
+    [VP
+        [V\\ sleep]
+        [Adv\\ furiously]
+    ] 
+]  
+}
+\z
+
+\ea
+$[$\subs{S} $[$\subs{NP} Colorless green ideas$]$ $[$\subs{VP} sleep furiously.$]]$
+\z
+
+\ea \label{ProductionRules}
+    \begin{xlist}
+    \ex \textit{S} $\rightarrow$ \textit{NP} \textit{VP}
+    \ex \textit{NP} $\rightarrow$ \textit{(A)}* \textit{N}
+    \ex \textit{VP} $\rightarrow$ \textit{V} \textit{(Adv)}\footnote{The production rules depicted here are simplified, representing only the elementary details shown in (2) and (3). Parentheses indicate optionality, and the symbol * in this scenario is the Kleene star, which indicates that a particular element can appear any number of times consecutively — for instance: \textit{The tall cloudy unstable inconsiderate thoughtless overbearing [...]}. In early conceptions of grammar, reflected in these rules, a sentence \textit{S} is composed of an obligatory noun phrase \textit{NP} and an obligatory verb phrase \textit{VP}, in that order. These child constituents, \textit{NP} and \textit{VP}, have their own rules as well, in similar fashion, as do prepositional phrases (\textit{PP}), adjective phrases (\textit{AP}), and others.}
+    \end{xlist}
+\z
+
+Additionally, the emergence of a theory of innate language capacity \citep{Putnam67, Wasow73}\footnote{This viewpoint is often termed the \textit{Innateness Hypothesis} (IH). The ideas themselves are attributed to theoretical advancements by Chomsky.} developed a view of all language acquisition as the consequence of mapping stimuli to latent faculty universally present in humans. The degree to which this theory holds is debated in literature past and present. Considerations such as these nonetheless add to theoretical exploration that will become useful for analyzing pronominal usage here. Since the simplistic representations seen in (2), further theoretical developments continued to formalize and broaden the scope of what operations comprise sentence structure. This includes aspects of movement, which serve to codify and account for discrepancies between natural language and plain phrase-structure rules, e.g. (5a-c).
+
+\ea \label{Transformations}
+    \begin{xlist}
+    \ex Extraposition: The party guest \_ danced outside \textbf{without sunglasses}.\footnote{Extraposition is the operation of positioning (hence the name) a constituent outside of its canonical, or standard, place in a relative clause, often no matter the distance. The prepositional phrase (PP) \textit{without sunglasses}, although directly modifying the subject, is significantly distanced. Semantically, this effects how the PP applies to the subject, i.e. that the party guest is without sunglasses perhaps only while outside, which may be unusual} .
+    
+    \ex \textit{Wh}-movement: \textbf{Whom} do you like eating at the diner across the street each weekend with \_?\footnote{The long-distance movement of \textit{who, what, when, where, why,} and \textit{how} in English interrogative constructions is a closely studied phenomenon \citep{Chomsky77, Kiss93}. Note the extended distance between \textit{whom} and the location it would otherwise be sitting in.}
+
+    \ex Passivization: $\varnothing$ \textbf{She}\subs{\textsc{{\scshape nom}}} is \_ \subs{\textsc{{\scshape acc}}} encouraged to finish the race.\
+    \end{xlist}
+\z
+
+Take (5c), for instance, which depicts a traditional example of a passive sentence. The average English speaker can generally identify that there exists a relationship between active and passive voice, in essence as two sides of the same coin. (6) represents a valid active version, with relevant morphological glossing.
+
+\ea \label{ActiveTrans}
+\gll Somebody encourage-s her to finish the race. \hspace{1 in}  \textbf{English} \\
+Somebody encourage-{\scshape 3.sg.pres} {\scshape pro.3.sg.acc} to finish the race. \\
+\glt `Somebody encourages her to finish the race.'
+\z
+
+\subsection{Transformational Grammar and Standard Theory}
+
+Phrase-structure rules alone will not be able to generalize and account for the syntactic relationship between active and passive voice in (5c) and (6). The constructions don't necessarily exist in isolation, and their connection is evident among native speakers of the language. For every sentence of an active voice, then, there also exists a passively-voiced version, sharing identical meaning. This repetition is unavoidable with phrase-structure rules alone, since there is nothing to indicate the relationship between the two. Chomsky identifies this limitation (7). A possible solution to this is to introduce the pair via another rule, but Chomsky, too, says this ignores that active and passive voice are structurally deterministic of one another. 
+
+\ea \label{PassRedup}
+``This inelegant duplication, as well as the special restrictions involving the element \textit{b}$+$\textit{en}, can be avoided only if we deliberately exclude passives from the grammar of phrase structure, and reintroduce them by a rule." \citep[p.~43]{Chomsky57}
+\z
+\begin{table}[btp] 
+\centering
+    \begin{tabular}{|c c c|}
+    \hline
+         & & \\
+         & Phrase-structure rules &  \\
+         & & \\
+         & $\downarrow$ &  \\
+         & & \\
+         & \hspace{-0.35in} Lexicon $\rightarrow$ D-structure $\rightarrow$ SR &  \\
+         & & \\
+         & \hspace{.95in} $\downarrow$ Transformations & \\
+         & & \\
+         & PF $\leftarrow$ S-structure \hspace{.345in} & \\
+         & & \\
+    \hline
+    \end{tabular}
+\caption*{Figure 1: Standard Theory}
+\end{table}
+As a result of issues such as these, proposals of transformations arose over the years and decades — which necessitated a richer dimensionality to how structure arises. Rather than taking sentences for face value, syntacticians began considering (and debating over) sentences as end results of abstract representations stepping through processes of operations given particular prerequisites. The starting point of these processes for a given sentence is termed a deep-structure (D-structure), while the final output is the surface-structure (S-structure) \citep{Chomsky57, Chomsky65}. This in turn heavily expands the strength of generative grammar to represent natural language by extending structure beyond the constraints of the original context-free approach. Out of this comes the Standard Theory of syntax \citep{Chomsky65}, the foundation of Chomskyan generative syntax and the typical model relied upon in theoretical linguistics for the time. Instead of phrase-structure rules (PSRs going forward), alone, dictating sentence realization, multiple steps become codified in this process --- after PSRs and lexical items (e.g. words, phrases) form the core representation in D-structure, which also forms the basis of semantic representation (SR). In this way, meaning is determined not by S-structure, but is rather by D-structure. Notably, the transformational operations that follow, then, do not alter meaning and simultaneously conform to PSRs with each step \textit{structure-preserving} \citep{Emonds70}. After this series of operations, like those that form examples (5a-c), it is shipped off to phonetic form (PF) --- which determines features such as prosody and stress, phoneme insertion and deletion, and sound assimilation\footnote{Phonology is a branch of theoretical linguistics concerned with sound systems and patterns, and why those sound units, called phonemes, adjust based on environment. One of the more basic examples is, for instance, why \textit{dogs} and \textit{cats}, despite sharing the same plural morpheme [-\textit{s}], have their final consonant pronounced differently among most English speakers --- a voiced alveolar fricative in [\textipa{\textprimstress}d\textipa{\textopeno}gz] versus a voiceless version in [\textipa{\textprimstress}k\textsuperscript{h}\textipa{\ae}ts]. In this case, they are allophones of the same phoneme. The related study of sound production, which is more so involved with phonemes in real-world time and space, i.e. the \textit{how}, is known as phonetics \citep[for past and present inquiry into theoretical and experimental phonological systems of language, see][]{Chomsky67,JescheniakLevelt94, Cohn2012}}. This proposed cognitive process is depicted in Figure 1, with movement from D- to S-structure, known as derivation, being the emphasis of this process. With as many special cases and scenarios seen across human languages, though, Standard Theory can introduce significant complications over transformation ordering along with operations done as technicalities to properly generate the S-structures seen in natural language.
+
+
+
+\subsection{The Role of Semantics}
+From Standard Theory came considerable debate over how D-structure should be interpreted, and how it fits into Standard Theory. Multiple phases of revision of it have taken place since. The growth of generative semantics by George Lakoff and Paul Postal, among others, furthered an approach that placed meaning as the basis for syntactic structure --- the opposite of Chomskyan generative linguistics at that time \citep{Lakoff71, Lakoff76}. Instead of PSRs constructing D-structure, derivations in this theory are from meaning transformationally building the appearance seen in S-structure. Generative semantics, itself, has since fallen out of the linguistics scene, although the fierce dialogue over how semantics fits into grammar has influenced the meaning- and thought-driven approach of Cognitive Linguistics \citep[see][]{Harris2021, Lakoff76, Langacker86}. These semantic developments provide insight into the history of meaning relevant for discussion of ambiguity in future.
+
+\subsection{Minimalist Operations and Head-Patterns}
+In present-day investigations, though, syntacticians generally opt for a simpler framework, which will also be assumed going forward in this paper. This includes more recent developments such as X$'$-theory for generalizing a constituent-head pattern and refined takes on movement operations, including those of the Minimalist Program (MP) \citep{Chomsky95}. MP defines a model of syntax as that seen in Figure 2 \citep[p.~2]{Ko14}, emphasizing any operations occurring only as constraints of economy allow it to. This minimalism strips down the process of derivation, removes the notion of PSRs in favor of two basic operations {\scshape Merge} (of generalized elements $\alpha$ and $\beta$) and {\scshape Move}, and supports a bottom-up approach to tree-building (compared to top-down in Standard Theory) in phases (where each phase represents the domain that a constituent-phrase would otherwise be). Movement is seen as the result of \textit{escape-hatches} of \textit{strong phases} CP (complementizer-phrase) and VP (verb-phrase) --- and all other phases are subject to the \textit{Phase-Impenetrability Condition} (PIC) that dictates heavy constraint on item movement. The discussion at hand will not adopt quite as radical a framework as MP, but will survey its usability in future as a means of explaining pronominal movement\footnote{Even with more generalized frameworks such as these in generative syntax, it's worth noting that the ordering of transformations across languages is still debated. A notable example is the timing of derivational ellipsis, which is thought by some to occur prior to pronounced expression in PF \citep{Lipták22}. Ellipsis is constituent omission generally due to the desire to avoid repetition or based on presupposed knowledge, i.e. (1a-c).
+
+\ea \label{Ellipsis}
+    \begin{xlist}
+        \ex I drink coffee but she does not \sout{drink coffee}.
+        \ex On {\scshape this} building there used to fly a Confederate flag, and on {\scshape that} building there did \sout{used to fly a Confederate flag}, too. \citep[p.~107]{Lipták22}
+        \ex Gwendolyn smokes marijuana, but \sout{Gwendolyn} seldom \sout{smokes marijuana} in her own apartment. \citep[p.~409]{HankamerSag76}
+    \end{xlist}
+\z
+
+}.
+
+
+
+\begin{table}[btp] 
+\centering
+    \begin{tabular}{|c c c|}
+    \hline
+         & & \\
+         & Numeration &  \\
+         & & \\
+         & \hspace{1.05in} $\downarrow$ Overt operations\footnote{Overt operations are visible transformations. Passivization, extraposition, and \textit{wh}-movement from (5a-c) are examples of overt operations because the relationship between placement of moved elements in D- and S-structure is visible, i.e. the constituents actually move position. Covert operations have results that are not seen or heard in S-structure} &  \\
+         & & \\
+         & \hspace{-0.35in} PF $\leftarrow$ Spell-out &  \\
+         & & \\
+         & \hspace{1in} $\downarrow$ Covert operations & \\
+         & & \\
+         & \hspace{.05in}LF\footnote{Logical Form (LF)} & \\
+         & & \\
+    \hline
+    \end{tabular}
+\caption*{Figure 2: The Minimalist Program \citep{Chomsky95, Ko14}}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Reference and Pronouns}
+
+\subsection{Nominalization in Brief}
+
+The ability to nominalize, or employ as a noun, various parts of speech emerges across languages, including English.
+
+\ea \label{Nom1}
+    \begin{xlist}
+        \ex Grocery shoppers often [\subs{VP} buy [\subs{NP} lemons]].
+        \ex Grocery shoppers [\subs{VP} love [\subs{NP} \textbf{buying lemons}]].
+    \end{xlist}
+\z
+
+In this case, the act specified in (8a) is represented as a NP in (8b). The word-level change, \textit{buy} $\rightarrow$ \newline \textit{buy}$+$[\textit{-ing}], represents a form of derivational morphology \citep{Lieber17}. With English in particular, this represents one of multiple forms of nominalization \citep{Chomsky70, Siegel98}.
+
+\ea \label{NomTypes}
+    \begin{xlist}
+        \ex Gerundive nominalization: [\subs{NP} \textbf{Cleaning electronic equipment}] proves difficult.
+        \ex Non-gerundive nominalization: [ \subs{NP} \textbf{The destruction of the memo}] took an hour. \citep[p.4]{Siegel98}
+        \ex Adjectival nominalization: [ \subs{NP} \textbf{The} \textbf{strong}] overcome [\subs{NP} \textbf{the weak}].
+        
+    \end{xlist}
+\z
+
+Notice the distinction between sentences such as (9a) versus those such as (9b) --- non-gerundive nominalizations lack the morphological addition of the suffix [-\textit{ing}]. Both involve some action, the (9a) being atelic and (9b) being durative in telicity\footnote{Telicity is a verbal property defining the completeness of an action. (9b) is a durative telic construction, also known as describing an accomplishment, in that the action (destroying the memo) occurs over some non-instant period of time (an hour). (9a), by contrast, specifies an action without a specified endpoint.}. The base verb \textit{destruct} changes in part-of-speech category, verb to noun, which is a form of derivational morphology (as opposed to inflectional, in which the given word's category remains constant), and also proves to be the case in (9a). 
+
+\subsection{Pronominalization}
+
+The usage of pronouns in natural language primarily serve the well-documented purpose of simplifying communication and discussion \citep{Postal66, Kayne02}, as seen in the following examples. This typically involves avoiding repetition and presuming a level of knowledge specific to a given sentence structure or context (pragmatics). Along the same lines of the previous discussion, pronominalization involves the process of representing some constituent as a pronoun. 
+
+\ea \label{prons}
+    Tisha saw the loaves of bread but didn't want any of \textbf{them}.
+\z
+In this sense, the pronoun \textit{them} refers back to the NP \textit{the loaves of bread}. This is only a surface-level description, though, and belies the complexity of reference and relationships between constituent meaning. Below demonstrates an example of how the act of nominalization can become salient in a pronominal construction. (12a-b) demonstrate the necessity for the 2nd-person pronoun \textit{you} in order to directly converse. In most any situation, a pronoun can be used to replace a given NP, whether or not that NP is the result of nominalization.
+
+\ea \label{gerundpro} Pronominalizing (9a):
+    [\subs{NP} Cleaning electronic equipment] proves difficult, especially when [\subs{NP} it] involves small devices and older machinery.
+\z
+
+\ea \label{prons}
+    \begin{xlist}
+        \ex Person A: I\subs{k} had to go to my class last night in the rain!
+        \ex Person B: Did you\subs{k} at least have an umbrella?        
+        \ex Person B: \#Did \textit{Person A}\subs{k} at bring a raincoat?
+    \end{xlist}
+\z
+
+(12c) allows for some light to be shed on the necessity of pronominalization when referring to people, both in direct conversation and in passing reference. This draws upon theoretical representations of how meaning can be carried across multiple degrees of constituent separation. 
+
+\subsection{Anaphora and Pragmatics}
+
+The relationship between pronouns and anaphoric relationships will be predicated going forward on the following definitions from \citet{Huang13} (emphasis added in bold), developed from MP and \citet{Chomsky95}.
+
+\ea \label{test}
+     \begin{xlist}
+         \ex `Anaphora can be described as \textbf{a relation between two linguistic elements}, in which the interpretation of one (called an anaphoric expression) is in some way determined by the interpretation of the other (called an antecedent)' \citep[p.~73]{Huang13}.
+         \ex `An anaphor is \textbf{a feature representation of an NP which must be referentially dependent} and which must be bound within an appropriately defined minimal syntactic domain' \citep[p.~74]{Huang13}\footnote{Think of a syntactic domain as some space in a given construction. This could be a single NP, like \textit{an umbrella}, or something that dominates a larger tree, like the VP \textit{running faster than the speed of light}}.
+     \end{xlist} 
+\z
+
+From this analysis comes distinctions between NPs, namely anaphors (bound to a local domain), pronominals (free in a local domain), and referential expressions (r-expressions going forward; free regardless of domains) \citep{Huang13}. The locality of reference distinguishes them from one another. Reflexives within a space enclosed by a shared head can be considered anaphora in this context.
+
+\ea
+    Joshua\subs{j} smiled at himself\subs{j} in the mirror.
+\z
+ 
+For specificity here, the subscript \textit{j} represents coindexing between the antecedent \textit{Joshua} and the anaphor \textit{himself}. Using indices in sentences such as (12a-c) and (14) help identify sources of meaning, and when a NP refers to another. Syntactically, r-expressions are domain-unconstrained, meaning that, no matter the conversation or situation, they can be inserted (given grammatical structure conformity). The constraints on relationships of anaphora are consequently termed binding conditions based on the formal syntactic approach of \citet{Chomsky95}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Where Language Reform Meets Linguistic Theory}
+
+\subsection{Language Reform and History}
+Within the past decade, and within the past few years in particular, awareness has increased over various aspects of the English language seen as exclusionary. As small steps by a growing range of English speakers to modify the language, changes such as the following are being seen more often in natural use.
+
+\ea 
+    \begin{xlist}
+        \ex Orthographic character-switching: Woman $\rightarrow$ womxn; latino $\rightarrow$ latinx; folks $\rightarrow$ folx
+        \ex Characteristic distancing: Disabled person $\rightarrow$ person with a disability; colored people $\rightarrow$ people of color
+        \ex Gendered opt-out: Waitress $\rightarrow$ server; actress $\rightarrow$ actor
+    \end{xlist}
+\z
+
+Common examples, seen above, involve mitigating perceived prevalence of oppression in natural language. This includes modifying markers or reminders of male gender, e.g. \textit{man}, commonly with the letter \textit{x} \citep{Ashlee17}. The \textit{folks}-to-\textit{folx} change tends to arise due to the inclusivity that [\textit{x}] is associated with from the other use cases. With (15b), a syntactic transformation, an Adj-to-P movement that I will refer to as characteristic distancing (CD going forward), seeks to place distance between a N and a historically marginalized characteristic (Adj or Adv) of that N --- such that the characteristic's emphasis on the meaning of N is reasonably minimized. This is sometimes called \textit{identity-first language}, as a result \citep{Dunn15} Additionally, when there exists at least one viable ungendered variant, use cases tend toward avoiding parts-of-speech that morphologically carry markers of physiological gender or gender identity (15c). These developments represent a rare pattern in comparison to the structural and formal theories of tranformational grammar among syntacticians: these movements, although overt in their changes up to S-structure, reflect a solely semantic motive. The growing desire to promote inclusivity in natural language in the US in particular is a budding example of bottom-up language reform. While language creation, e.g. Esperanto \citep{Fiedler}, and systemic language modifications, e.g. Turkish \citep{Tachau}, are well-documented examples of government- or policy-led reform, the modifications in (15) were not spurred by mandated political influence. Instead, they started first with average native speakers. From there, language choices have modified to accommodate.
+
+Perhaps the most prominent element of this active movement in language reform is the popularity of \textit{they} regardless of gender identity \citep{Zimman}, commonly called an epicene pronoun. Building off of the anaphora relationships discussed in \citet{Arnold21} and \citet{Balhorn}, the usage of \textit{they} as a pronoun whose semantic antecedent is a singular person is increasingly used today. 
+
+\ea
+    `The pronoun \textit{they} can be either plural or singular, perhaps referring to an individual who identifies as nonbinary' \citep[p.~1]{Arnold21}.
+\z
+
+A distinct feature of this development is how it is perhaps the culmination of multiple efforts and patterns of \textit{they} usage in English language history. For instance, \citet{Baron}, at the outset states:
+
+\ea
+\begin{xlist}
+    \ex `The creation of an epicene or bisexual pronoun stands out as the one most often advocated and attempted, and the one that has most often failed' \citep[p.~83]{Baron}.
+    \ex `Use of the plural [\textit{they}-forms] was labeled downright wrong, if not worthy of eternal damnation, and pairing of the masculine and feminine [...] was most often rejected as ugly and cumbersome' \citep[p.~83]{Baron}.
+\end{xlist}
+\z
+\section{Agreement in Syntax and Morphology}
+
+\subsection{Corpus Numbers}
+Citing an example as early as 1878, Baron considers past avoidance (and, at that time, current avoidance) of an ungendered epicene pronoun. For instance: between 1990 and 2019, the Corpus of Contemporary American English (COCA) \citep{Davies} --- a collection of texts from digital and physical media in the US --- counts 375,141 instances of the string \textit{they are}, across sources including television, news, and academic articles. From 1990 to 1994, 39,588 total usages of the string emerged, which is about the same as the number from 2015 - 2019. The use of the \textit{they} itself reaches past 500,000 in total, with most usages resulting from within recent years. And, yet, over all the data available to COCA, a mere 159 total cases of the string \textit{they is} appear. This reflects the morphosyntactic necessity of agreement Barron and Chomsky separately identify.
+
+\subsection{Morphological and Pragmatic Constraints}
+
+\ea
+\begin{xlist}
+    \ex They would rather be sleeping in the bed than on the sofa.
+    \ex *They wants a cookie from the store.
+\end{xlist}
+\z
+
+Even across extended distances of auxiliary modifiers (18a), the epicene pronoun seeks agreement just as the plural usage of \textit{they} does --- minus a distinctive exception: reflexives as anaphora. Given, {\scshape Fact: Ryan\subs{r}, a student, is a non-binary individual}:
+\
+\ea
+\begin{xlist}
+    \ex Nominative: They\subs{r} are such a great speaker in class.
+    \ex Accusative: The instructor gave them a great grade on their\subs{r} essay.
+    \ex Reflexive: They\subs{r} looked at themself\subs{r} in the mirror after class.
+    \ex Genitive (possession): The pencil is theirs\subs{r}.
+\end{xlist}
+\z
+
+Going against counterarguments of researchers such as \citet{Bick}, and even \citet{Baron}, who are unable to come to conclusions about the nature of reflexive anaphora, the reflexive use-case of the English epicene pronoun likely undergoes an overt operation meant to satisfy both LF and the case agreement involving singular pronouns (he, she, it). Where multiple other aspects of morphological case lend themselves to makeshift alternatives, e.g. \textit{y'all, y'all's}, etc. acclimation to the epicene pronoun \textit{they} needs not such accomodations. However, where the epicene pronoun agrees with the verbal copula in the plural form (19a), agrees with other verbs while in accusative case (19b), and satisfies the typical morphological affix denoting plural possession (19d), the reflexive anaphor in (19c) stands as an outlier. A possible proposal is that, at some point in derivation, a given sentence undergoes an operation that deterministically modifies the typical instance of the epicene reflexive to reflect a singular antecedent when used. Given how recent this contemporary development in epicene pronoun usage is, especially compared to past examples (e.g. defaulting to \textit{he}), this should be explored in future.
+
+\section{Holistic Discussion}
+
+\subsection{Concluding Remarks}
+The scope of this paper is certainly exploratory, briefly covering the history of modern descriptive syntactic investigation, and going into the morphosyntactic constraints surrounding a Chomskyan understanding of anaphora. In sum, the primary goal of the information at hand is to provide a unifying exploration of the most recent movement of language reform seen regarding an epicene pronoun. In surveying recent data and research-driven examples from others about the nature and usage of anaphora, the conclusion is reached that the epicene usage falls within the context of a larger language reform and exhibits an unusual morphosyntactic quality that could be the result of an overt operation in derivation. 
+
+\subsection{Limitations}
+Some of the real-world limitations of exploratory research such as this include constraints of time and resources. The degree to which the heavily theoretical morphology of reflexive anaphora could be covered necessarily fell within the bounds of an academic quarter and the maximum number of pages allowed. More importantly, the ability to conduct a large-scale primary research experiment would have been ideal, but unrealistic given these constraints. This perhaps could provide information that might even muddle how often English speakers default to the irregular reflexive form of the epicene pronoun. Moreover, the advanced eschelons of generative linguistic theory that might more soundly codify these observations can lie beyond undergraduate curricula. Unlike syntax, semantics, and phonology, morphology is not an often taught course at UC Santa Cruz.
+
+\subsection{Implications}
+In future, I would recommend the unified ideas presented in this paper to be taken up by a student of graduate-level or higher, to better relate them to MP, derivational timing, and distributed morphology (the theory that syntax and morphology are in essence one and the same). Building off of the research of \citet{Arnold21} would undoubtedly be a beneficial decision, especially in relating the more cognitive and sociolinguistic approach of their paper to the theoretical approach of this exploration. In future, I hope to revise and build upon this paper in my time here at UC Santa Cruz as I progress through my undergraduate career. My priorities will be fortifying a more pronounced theory of the cognitive and transformational movement that might be at work in reflexive anaphora, as well as keeping a keen eye on data about epicene pronouns and inclusive language as the US continues to evolve
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{100}
+
+
+    \bibitem[Arnold et al., 2021]{Arnold21}Arnold, J. E., Mayo, H. C., \& Dong, L. (2021). My pronouns are they/them: Talking about pronouns changes how pronouns are understood. \textit{Psychonomic Bulletin \& Review}, \textit{28}(5), 1688–1697. https://doi.org/10.3758/s13423-021-01905-0
+    
+    \bibitem[Ashlee et al., 2017]{Ashlee17} Ashlee, A. A., Zamora, B., \& Karikari, S. N. (2017). We are woke: A collaborative critical autoethnography of three “womxn” of color graduate students in higher education. \textit{International Journal of Multicultural Education}, \textit{19}(1), 89. https://doi.org/10.18251/ijme.v19i1.1259
+    
+    \bibitem[Balhorn, 2004]{Balhorn} Balhorn, M. (2004). The rise of epicene they. \textit{Journal of English Linguistics}, \textit{32}(2), 79–104. https://doi.org/10.1177/0075424204265824
+    
+    \bibitem[Baranowski, 2002]{Baranowski} Baranowski, M. (2002). Current usage of the epicene pronoun in written English. \textit{Journal of Sociolinguistics}, \textit{6}(3), 378–397. https://doi.org/10.1111/1467-9481.00193
+    
+    \bibitem[Baron, 1981]{Baron}Baron, D. E. (1981). The epicene pronoun: The word that failed. American Speech, 56(2), 83. https://doi.org/10.2307/455007
+    \bibitem[Bodine, 1975]{Bodine} Bodine, A. (1975). Androcentrism in prescriptive grammar: Singular “they”, sex-indefinite “he”, and “he or she.” \textit{Language in Society}, \textit{4}(2), 129–146. http://www.jstor.org/stable/4166805
+    
+    \bibitem[Bickerton, 1987]{Bick}Bickerton, D. (1987). He himself: anaphor, pronoun, or...?. \textit{Linguistic Inquiry}, \textit{18}(2), 345-348.
+    
+    \bibitem[Chomsky, 1956]{Chomsky56}Chomsky, N. (1956). Three models for the description of language. \textit{IEEE Transactions on Information Theory}, \textit{2}(3), 113–124. https://doi.org/10.1109/tit.1956.1056813
+    
+    \bibitem[Chomsky, 1957]{Chomsky57} Chomsky, N. (1957). \textit{Syntactic structures}. De Gruyter. https://doi.org/10.1515/9783112316009
+
+    \bibitem[Chomsky, 1965]{Chomsky65} Chomsky, N. (1965). \textit{Aspects of the theory of syntax}. The MIT Press.
+    
+    \bibitem[Chomsky, 1967]{Chomsky67} Chomsky, N. (1967). Some general properties of phonological rules. \textit{Language}, \textit{43}(1), 102. https://doi.org/10.2307/411387
+    
+    \bibitem[Chomsky, 1970]{Chomsky70}Chomsky, N. (1970). Remarks on nominalization. In: R. Jacobs and P. Rosenbaum (eds.) \textit{Reading in English Transformational Grammar}, 184-221. Waltham: Ginn.
+    
+    \bibitem[Chomsky, 1977]{Chomsky77}Chomsky, N. (1977). On wh-movement. In: P. Culicover, T. Wasow and A. Akmajian (eds.). \textit{Formal Syntax}. New York: Academic Press, 71-132.
+
+    \bibitem[Chomsky, 1986]{Chomsky86}Chomsky, N. (1986). \textit{Knowledge of language: Its nature, origin and use}. Praeger.
+
+    \bibitem[Chomsky, 1995]{Chomsky95}Chomsky, N. (1995). \textit{The minimalist program}. MIT Press.
+
+    \bibitem[Chomsky \& Schützenberger, 1963]{ChomskySchutzenberger63}Chomsky, N., \& Schützenberger, M. P. (1963). The algebraic theory of context-free languages. \textit{Computer Programming and Formal Systems}, \textit{35}(0049-237X), 118–161. https://doi.org/10.1016/s0049-237x(08)72023-8
+    
+    \bibitem[Cohn et al., 2012]{Cohn2012} Cohn, A. C., Cécile Fougeron, \& Huffman, M. K. (2012). \textit{The Oxford handbook of laboratory phonology}. Oxford University Press.
+    
+    \bibitem[Davies, 2008]{Davies}Davies, Mark. (2008-) The Corpus of Contemporary American English (COCA). Available online at https://www.english-corpora.org/coca/.
+    
+    \bibitem[Dunn \& Andrews, 2015]{Dunn15}Dunn, D. S., \& Andrews, E. E. (2015). Person-first and identity-first language: Developing psychologists’ cultural competence using disability language. \textit{American Psychologist}, 70(3), 255–264. https://doi.org/10.1037/a0038636
+    
+    \bibitem[Emonds, 1970]{Emonds70} Emonds, J. E. (1970). Root and structure-preserving transformations (Doctoral dissertation, Massachusetts Institute of Technology).
+    
+    \bibitem[Everett, 2011]{Everett} Everett, C. (2011). Gender, pronouns and thought: The ligature between epicene pronouns and a more neutral gender perception. \textit{Gender and Language}, \textit{5}(1). https://doi.org/10.1558/genl.v5i1.133
+    
+    \bibitem[Fiedler, 2015]{Fiedler} Fiedler, S. (2015). The topic of planned languages (Esperanto) in the current specialist literature. \textit{Language Problems and Language Planning}, \textit{39}(1), 84–104. https://doi.org/10.1075/lplp.39.1.05fie
+    
+    \bibitem[Güneş \& Lipták, 2011]{Lipták22}Güneş, G., \& Lipták, A. (2022). \textit{The derivational timing of ellipsis}. Oxford University Press.
+
+    \bibitem[Hankamer, 1973]{Hankamer73}Hankamer, J. (1973). Unacceptable ambiguity. \textit{Linguistic Inquiry}, \textit{4}(1), 17–68. http://www.jstor.org/stable/4177750
+    
+    \bibitem[Hankamer \& Sag, 1976]{HankamerSag76}Hankamer, J., \& Sag, I. (1976). Deep and surface anaphora. \textit{Linguistic Inquiry}, \textit{7}(3), 391–428. http://www.jstor.org/stable/4177933
+    
+    \bibitem[Harris, 2021]{Harris2021} Harris, R. A. (2021). \textit{The linguistics wars: Chomsky, Lakoff, and the battle over deep structure}. Oxford University Press.
+    
+    \bibitem[Huang, 2013]{Huang13}Huang, Y. (2013). "Neo-Gricean pragmatics". In: Huang, Y. (ed.). \textit{The Oxford handbook of pragmatics}. Oxford University Press.
+    https://doi.org/10.1093/oxfordhb/9780199697960.001.0001
+    
+    \bibitem[Jescheniak \& Levelt, 1994]{JescheniakLevelt94} Jescheniak, J. D., \& Levelt, W. J. M. (1994). Word frequency effects in speech production: Retrieval of syntactic information and of phonological form. \textit{Journal of Experimental Psychology: Learning, Memory, and Cognition}, \textit{20}(4), 824–843. https://doi.org/10.1037/0278-7393.20.4.824
+    
+    \bibitem[Kayne, 2002]{Kayne02}Kayne, R. (2002). Pronouns and their antecedents. \textit{Derivation and explanation in the minimalist program}, \textit{133}(166).
+    
+    \bibitem[Kiss, 1993]{Kiss93} Kiss, K. (1993). Wh-movement and specificity. \textit{Natural Language and Linguistic Theory}, \textit{11}(1), 85–120. https://doi.org/10.1007/bf00993022
+    
+    \bibitem[Ko, 2014]{Ko14} Ko, H. (2014). \textit{Edges in syntax: Scrambling and cyclic linearization}. Oxford University Press.
+    
+    \bibitem[Lakoff, 1971]{Lakoff71} Lakoff, G. (1971). On generative semantics. In: D. D. Steinberg \& L. A. Jakobovits (Eds.), \textit{Semantics: An Interdisciplinary Reader in Philosophy, Linguistics and Psychology} (pp. 232–296). Cambridge: Cambridge University Press.
+
+    \bibitem[Lakoff, 1976]{Lakoff76} Lakoff, G. (1976). Toward generative semantics. \textit{Syntax and Semantics: Notes from the Linguistic Underground}, \textit{7}, 43–61. https://doi.org/10.1163/9789004368859\_005
+    
+    \bibitem[Langacker, 1986]{Langacker86}Langacker, R. (1986). An introduction to cognitive grammar. \textit{Cognitive Science}, \textit{10}(1), 1–40. https://doi.org/10.1016/s0364-0213(86)80007-6
+    
+    \bibitem[Lieber, 2017]{Lieber17}Lieber, R. (2017). Derivational morphology. In: \textit{Oxford Research Encyclopedia of Linguistics} Oxford University Press. https://doi.org/10.1093/acrefore/9780199384655.013.248
+
+    \bibitem[Meadows, 2022]{Meadows} Meadows, M. (2022). The effect of RC type on agreement production. In: Balachandran, L., \& Duff, J. (eds.). \textit{Syntax \& Semantics at Santa Cruz}, \textit{5}. Linguistics Research Center, Department of Linguistics, University of California, Santa Cruz, 59-76. https://escholarship.org/uc/item/2s3545j1
+    
+    \bibitem[Newman, 1992]{Newman} Newman, M. (1992). Pronominal disagreements: The stubborn problem of singular epicene antecedents. \textit{Language in Society}, \textit{21}(3), 447–475. https://doi.org/10.1017/s0047404500015529
+    
+    \bibitem[Postal, 1966]{Postal66}Postal, Paul. 1966. On so-called pronouns in English. In: Dinneen, F. (ed.). \textit{Report of the 17th annual round table meeting on languages and linguistics}, 177–206. Washington, D.C.: Georgetown University Press.
+
+    \bibitem[Pullum \& Gazdar, 1982]{PullumGazdar82}Pullum, G. K., \& Gazdar, G. (1982). Natural languages and context-free languages. \textit{Linguistics and Philosophy}, \textit{4}(4), 471–504. https://doi.org/10.1007/bf00360802
+
+    \bibitem[Putnam, 1967]{Putnam67}Putnam, H. (1967). The “Innateness Hypothesis” and explanatory models in linguistics. \textit{Synthese}, \textit{17}(1), 12–22. http://www.jstor.org/stable/20114532
+    
+    \bibitem[Siegel, 1998]{Siegel98} Siegel, L. (1998). “Gerundive nominals and the role of aspect”. In: Austin, J., \& Lawson, A. (eds.). \textit{Proceedings of ESCOL 1997}.
+    
+    \bibitem[Stokhof \& van Lambalgen, 2011]{StokhofvanLambalgen2011}Stokhof, M., \& van Lambalgen, M. (2011). Abstractions and idealisations: The construction of modern linguistics. \textit{Theoretical Linguistics}, \textit{37}(1-2), 1–26. https://doi.org/10.1515/thli.2011.001
+
+    \bibitem[Tachau, 1964]{Tachau}Tachau, F. (1964). Language and politics: Turkish language reform. \textit{The Review of Politics}, \textit{26}(2), 191–204. https://doi.org/10.1017/s0034670500004733
+
+    \bibitem[Wasow, 1973]{Wasow73}Wasow, T. (1973). The innateness hypothesis and grammatical relations. \textit{Synthese}, \textit{26}(1), 38–56. https://doi.org/10.1007/bf00869755
+
+    \bibitem[Zimman, 2017]{Zimman}Zimman, L. (2017). Transgender language reform. \textit{Journal of Language and Discrimination}, \textit{1}(1), 84–105. https://doi.org/10.1558/jld.33139
+
+\end{thebibliography}
+
+
+\section*{Appendix A: Symbols}
+
+*: In phrase-structure rules: Kleene star. In sentence constructions: Ungrammaticality. \\
+$\varnothing$: Deletion of a lexical item or constituent. \\
+\#: An ill-formed, but syntactically grammatical, utterance or sentence. \\
+?: Well-formedness cannot be confidently determined.
+
+\section*{Appendix B: Morphological Glossing Abbreviations}
+1: First person agreement\\
+2: Second person agreement\\
+3: Third person agreement\\
+{\scshape acc}: Accusative case\\
+{\scshape nom}: Nominative case\\
+{\scshape past}: Past tense \\
+{\scshape pl}: Plural \\
+{\scshape pres}: Present tense \\ 
+{\scshape pro}: Pronoun \\
+{\scshape prog}: Progressive \\
+{\scshape prt}: Participle \\
+{\scshape sg}: Singular \\
+
+\section*{Appendix C: Constituent and Derivational Notation}
+Adj: Adjective \\
+AdjP: Adjective phrase \\
+Adv: Adverb \\
+AdvP: Adverbial phrase \\
+C: Complementizer \\
+CP: Complementizer phrase \\
+D: Determiner \\
+DP: Determiner phrase \\
+LF: Logical Form \\
+N: Noun \\
+NP: Noun phrase \\
+PF: Phonetic Form \\
+PP: Prepositional phrase \\
+Pro: Pronoun \\
+SR: Semantic representation \\
+T: Tense \\
+TP: Tense phrase \\
+V: Verb \\
+VP: Verb phrase \\
+
+\end{document}
+
